@@ -1,0 +1,60 @@
+body{height:100vh; font-family: 'Inter', sans-serif;}
+.left{background:linear-gradient(135deg, #136BA9 0%, #0A7ED0 100%);}
+.left h1{color:white !important; font-weight:700; font-size:2.5rem; margin-bottom:1rem;}
+.left p{color:white !important; font-size:1.2rem; opacity:0.95;}
+.google-btn {
+  background: white !important;
+  color: #136BA9 !important;
+  border: 2px solid #e8eaed !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.google-btn:hover {
+  background: #f8f9fa !important;
+  border-color: #dadce0 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.google-icon {
+  width: 20px;
+  height: 20px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3LjU5NyAxMC4yOEMxNy42NzUgMTAuNTY3IDE3LjY5OSAxMC44NjIgMTcuNjg4IDExLjE2QzE3LjY4OCAxNC4wNzcgMTUuMDk3IDE2LjM3IDEyLjA5IDE2LjUyVjE5LjQ5OGgtMy4yMDZ2LTIuOTg0QzQuOTk5IDE2LjI5NSAzLjE2IDE0LjE1NyAzLjE2IDExLjc0QzMuMTYgOC4yMzcgNi4wMDcgNS4zOTkgOS4xNiA1LjM5OEMxMC45OTQgNS4zOTkgMTIuNTYgNS45NzcgMTMuNzYgNi44NDNMMTEuOTcgOC41OThDOC45OTcgOC4yNzcgNy42OTUgNy41OTcgNy42OTUgNS43OThDNS42OTUgMy4zOTcgOC40OTMgMS4wOTkgMTEuMTYgMS4wOTlDMTRuMzUgMS4wOTkgMTYuNzYgMy44MDcgMTYuNzYgNy4yOThDMjAuNzYgMTEuMDk4IDE3LjU5NyAxMC4yOSAxNy41OTcgMTAuMjhaIiBmaWxsPSIjNDI4NUY0Ii8+Cjwvc3ZnPgo=') no-repeat center;
+  background-size: contain;
+}
+.divider {
+  position: relative;
+  height: 1px;
+  background: #e8eaed;
+  margin: 2rem 0;
+}
+.divider::before {
+  content: 'ou continue com';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0 1.5rem;
+  color: #6b7280 !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.welcome {
+  text-align: center;
+}
+#EntarBtn {
+  background: #0A7ED0 !important;
+  border-color: #0A7ED0 !important;
+  color: white !important;
+}
+#EntarBtn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}

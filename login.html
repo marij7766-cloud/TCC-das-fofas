@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="login.js"></script>
+    <link href="login.css" rel="stylesheet">
+
+</head>
+<body class="d-flex">
+<div class="col-6 d-flex flex-column justify-content-center p-5 left">
+<h1>Porque quando um uniforme é compartilhado, a igualdade se multiplica</h1>
+<p>Junte-se a milhares de famílias</p>
+</div>
+<div class="col-6 d-flex justify-content-center align-items-center p-4">
+<div class="w-75 max-w-md">
+<h3 class="mb-4 fw-semibold text-dark" id="welcome">Bem-vindo de volta!</h3>
+
+
+<form action="login.php" method="POST">
+    <input class="form-control form-control-lg mb-3" name="email" id="emailInput" placeholder="E-mail" type="email" required>
+    <input class="form-control form-control-lg mb-4" name="senha" id="senhaInput" type="password" placeholder="Senha" required>
+    <button type="submit" class="btn btn-primary w-100 py-3 mb-3 fw-semibold fs-6" id="EntarBtn" disabled>Entrar</button>
+</form>
+
+<div class="text-center">
+<small class="text-muted">Não tem conta? <a href="cadastrar.html" class="text-primary fw-semibold">Cadastre-se</a></small>
+</div>
+</div>
+</div>
+
+</body>
+</html>

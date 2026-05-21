@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Uniforme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="publicar.js"></script>
+    <link href="publicar.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <a href="logado.html"><i class="fas fa-arrow-left" style="font-size: 1.25rem; color: #0A7ED0; cursor: pointer;"></i></a>
+            <h1 class="font-bold">PasseAdiante</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <h1 class="page-title font-bold text-blue-600">Publicar Uniforme</h1>
+                <p class="page-subtitle">Adicione fotos e informações do uniforme que deseja publicar.</p>
+
+                <form class="form" id="productForm">
+
+                    <div>
+                        <label class="section-label">Fotos do uniforme</label>
+                        <p class="section-description">Adicione até 4 fotos reais do item.</p>
+                        <div class="photo-slots">
+                            <div class="photo-slot" data-slot="frente">
+                                <i class="fas fa-camera"></i>
+                                <span class="photo-slot-label">Frente</span>
+                            </div>
+                            <div class="photo-slot" data-slot="verso">
+                                <i class="fas fa-camera-rotate"></i>
+                                <span class="photo-slot-label">Verso</span>
+                            </div>
+                            <div class="photo-slot" data-slot="etiqueta">
+                                <i class="fas fa-tag"></i>
+                                <span class="photo-slot-label">Etiqueta (Tamanho)</span>
+                            </div>
+                            <div class="photo-slot" data-slot="desgaste">
+                                <i class="fas fa-magnifying-glass"></i>
+                                <span class="photo-slot-label">Detalhe de Desgaste</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label class="label" for="title">Descrição do anúncio</label>
+                            <textarea id="description" class="textarea" placeholder="Descreva o estado do uniforme, detalhes de desgaste, lavagens..."></textarea>
+                        </div>
+                        <div>
+                            <label class="label">Escola</label>
+                            <div class="custom-select">
+                            <input type="text" id="school" list="schoolOpcions" class="input" placeholder="Indique a Escola">
+                            <datalist id="schoolOpcions">
+                            <option value="Colégio Objetivo">
+                            <option value="Colégio COC">
+                            <option value="Colégio Marisa">
+                            <option value="Escola Farias Brito">
+                            <option value="Colégio Pensi">
+                            </datalist>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="label">Tamanho</label>
+                            <div class="custom-select">
+                                <div class="select" id="sizeSelect">Selecionar tamanho</div>
+                                <div class="select-options" id="sizeOptions">
+                                    <div class="select-option" data-value="6">6</div>
+                                    <div class="select-option" data-value="8">8</div>
+                                    <div class="select-option" data-value="10">10</div>
+                                    <div class="select-option" data-value="12">12</div>
+                                    <div class="select-option" data-value="14">14</div>
+                                    <div class="select-option" data-value="16">16</div>
+                                    <div class="select-option" data-value="PP">PP</div>
+                                    <div class="select-option" data-value="P">P</div>
+                                    <div class="select-option" data-value="M">M</div>
+                                    <div class="select-option" data-value="G">G</div>
+                                    <div class="select-option" data-value="GG">GG</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="label">Condição</label>
+                            <div class="custom-select">
+                                <div class="select" id="conditionSelect">Condição do item</div>
+                                <div class="select-options" id="conditionOptions">
+                                    <div class="select-option" data-value="novo">Novo</div>
+                                    <div class="select-option" data-value="seminovo">Seminovo</div>
+                                    <div class="select-option" data-value="bom">Usado - Bom estado</div>
+                                    <div class="select-option" data-value="regular">Usado - Regular</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="label">Tipo de negócio</label>
+                            <div class="type-buttons">
+                                <button type="button" class="type-btn active" data-type="venda">Venda</button>
+                                <button type="button" class="type-btn" data-type="troca">Troca</button>
+                                <button type="button" class="type-btn" data-type="doacao">Doação</button>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="label">Cidade - Estado</label>
+                            <input type="text" id="ce" class="input" placeholder="Ex: Goiânia - Goiás">
+                        </div>
+
+                        <div id="priceField" class="price-container">
+                            <label class="label" for="price">Preço (R$)</label>
+                            <input type="number" id="price" class="input price-input" placeholder="0,00" step="0.01">
+                        </div>
+                            <div class="d-grid gap-1"></div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-upload"></i>
+                        Publicar Uniforme
+                    </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

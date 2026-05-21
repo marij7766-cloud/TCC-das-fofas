@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="chat.js"></script>
+    <link href="chat.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="chat-container">
+        <header class="header">
+        <a href="logado.html" class="btn btn-outline-dark btn-sm p-2" title="Voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+            <h1>Mensagens</h1>
+
+    <div class="d-flex gap-2">
+        <a href="perfil.html" class="btn btn-outline-dark btn-sm p-2" title="Perfil">
+            <i class="fas fa-circle-user"></i>
+        </a>
+    </div>
+
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <h2>Suas Conversas</h2>
+                </div>
+                <div class="conversations">
+                    <div class="conversation active" data-conv="1">
+                        <div style="display: flex; align-items: center;">
+                            <div class="conv-avatar">ML</div>
+                            <div class="conv-info">
+                                <div class="conv-name">Maria Lima</div>
+                                <div class="conv-product">Camiseta Polo</div>
+                                <div class="conv-last-msg">Posso fazer por R$ 32. Fechamos?</div>
+                                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">10:35</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversation" data-conv="2">
+                        <div style="display: flex; align-items: center;">
+                            <div class="conv-avatar">CS</div>
+                            <div class="conv-info">
+                                <div class="conv-name">Carlos Santos</div>
+                                <div class="conv-product">Bermuda Escolar</div>
+                                <div class="conv-last-msg">Combinado! Vamos marcar a entrega.</div>
+                                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">Ontem</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversation" data-conv="3">
+                        <div style="display: flex; align-items: center;">
+                            <div class="conv-avatar">AO</div>
+                            <div class="conv-info">
+                                <div class="conv-name">Ana Oliveira</div>
+                                <div class="conv-product">Agasalho Completo</div>
+                                <div class="conv-last-msg">Obrigada pela doação! 🙏</div>
+                                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">Seg</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Area do chat -->
+            <main class="chat-area">
+
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <button class="back-btn" id="backBtn" style="display: none;">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <div class="chat-avatar">ML</div>
+                        <div>
+                            <div class="chat-user-name">Maria Lima</div>
+                            <div class="chat-user-product">Camiseta Polo Manga Curta</div>
+                        </div>
+                    </div>
+                    <button class="btn-confirm">
+                        <i></i>Confirmar Compra
+                    </button>
+                </div>
+
+                <div class="messages-container" id="messagesContainer">
+                    <div class="message other">
+                        <div class="message-bubble">
+                            <div>Olá! Vi seu anúncio da camiseta polo. Ainda está disponível?</div>
+                            <div class="message-time">10:30</div>
+                        </div>
+                    </div>
+                    <div class="message me">
+                        <div class="message-bubble">
+                            <div>Oi! Sim, ainda está disponível. Está em ótimo estado!</div>
+                            <div class="message-time">10:32</div>
+                        </div>
+                    </div>
+                    <div class="message other">
+                        <div class="message-bubble">
+                            <div>Ótimo! Teria como fazer por R$ 30?</div>
+                            <div class="message-time">10:33</div>
+                        </div>
+                    </div>
+                    <div class="message me">
+                        <div class="message-bubble">
+                            <div>Posso fazer por R$ 32. Fechamos?</div>
+                            <div class="message-time">10:35</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            class="message-input" 
+                            id="messageInput"
+                            placeholder="Digite sua mensagem..."
+                        >
+                        <button class="send-btn" id="sendBtn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
